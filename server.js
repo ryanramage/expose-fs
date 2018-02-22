@@ -21,7 +21,7 @@ module.exports = function(root) {
     }
 
     var onerror = function(err) {
-      if (!err) return res.end()
+      if (!err) return res.end(JSON.stringify({ok: true}))
       res.statusCode = err.code === 'ENOENT' ? 404 : 500
       res.end(err.message)
     }
