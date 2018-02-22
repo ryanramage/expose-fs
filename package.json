@@ -1,7 +1,7 @@
 {
-  "name": "expose-fs",
+  "name": "expose-fs-patched",
   "version": "1.5.1",
-  "description": "expose your filesystem using a http server",
+  "description": "expose your filesystem using a http server [patched]",
   "main": "server.js",
   "dependencies": {
     "after-all": "^2.0.1",
@@ -17,6 +17,6 @@
   "scripts": {
     "start": "node server.js"
   },
-  "author": "Mathias Buus",
+  "author": "Ryan Ramage",
   "license": "MIT"
 }
