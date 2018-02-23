@@ -1,6 +1,6 @@
 {
   "name": "expose-fs-patched",
-  "version": "1.5.3",
+  "version": "1.5.4",
   "description": "expose your filesystem using a http server [patched]",
   "main": "server.js",
   "dependencies": {

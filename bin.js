@@ -8,7 +8,7 @@ var createServer = require('./')
 
 var argv = minimist(process.argv.slice(2), {alias:{port:'p', quiet:'q', help:'h', tunnel:'t'}})
 var p = argv._[0] || '.'
-var port = argv.port || 8441
+var port = argv.port || 8080
 
 if (argv.help) {
   console.log(fs.readFileSync(path.join(__dirname, 'help.txt'), 'utf-8'))
