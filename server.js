@@ -6,6 +6,8 @@ var path = require('path')
 var mkdirp = require('mkdirp')
 var cors = require('cors')
 var url = require('url')
+var mime = require('mime')
+mime.define({'application/json': ['geojson']}, true)
 
 module.exports = function(root) {
   if (!root) root = '/'
@@ -40,6 +42,7 @@ module.exports = function(root) {
     var onfile = function(st) {
       server.emit('file', u, st)
       res.setHeader('Content-Length', st.size)
+      res.setHeader('Content-Type', mime.getType(u))
       pump(fs.createReadStream(u), res)
     }
 
